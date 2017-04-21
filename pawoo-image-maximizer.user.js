@@ -22,6 +22,9 @@
                      '    height: auto !important;' +
                      '    display: block !important;' +
                      '}', sheet.cssRules.length);
+    sheet.insertRule('.status div {' +
+                     '    height: auto !important;' +
+                     '}', sheet.cssRules.length);
     var maximize = function(doc) {
         var photos = doc.querySelectorAll('.media-item .u-photo');
         for (var i = 0; i < photos.length; i++) {
