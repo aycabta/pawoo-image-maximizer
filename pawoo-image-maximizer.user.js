@@ -1,7 +1,7 @@
 ﻿// ==UserScript==
 // @name       Pawoo Image Maximizer
 // @namespace  http://aycabta.github.io/
-// @version    0.0.1
+// @version    0.0.2
 // @description  Pawoooooooooo
 // @include    /^https:\/\/pawoo.net/
 // @copyright  2017+, You
