@@ -58,11 +58,11 @@
     maximize(document);
     document.body.addEventListener(
         'AutoPagerize_DOMNodeInserted',
-        function(e) {
+        e => {
             maximize(e.target);
         },
         false);
-    var observer = new MutationObserver(function(mutations) {
+    var observer = new MutationObserver(mutations => {
         mutations.forEach(m => {
             if (m.addedNodes !== undefined) {
                 m.addedNodes.forEach(n => {
