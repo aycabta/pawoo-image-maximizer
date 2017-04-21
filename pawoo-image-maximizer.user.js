@@ -36,6 +36,16 @@
                 photo.appendChild(img);
             }
         });
+        photos = doc.querySelectorAll('.scrollable a[style*="background"]');
+        photos.forEach(photo => {
+            if (photo.getElementsByTagName('img').length == 0) {
+                var url = photo.attributes['href'].value;
+                var img = document.createElement("img");
+                img.src = url;
+                img.style.width = '100%';
+                photo.appendChild(img);
+            }
+        });
     };
     maximize(document);
     document.body.addEventListener(
@@ -44,4 +54,14 @@
             maximize(e.target);
         },
         false);
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(m => {
+            if (m.addedNodes !== undefined) {
+                m.addedNodes.forEach(n => {
+                    maximize(n);
+                });
+            }
+        });
+    });
+    observer.observe(document.querySelector('body'), { childList: true, subtree: true });
 })();
