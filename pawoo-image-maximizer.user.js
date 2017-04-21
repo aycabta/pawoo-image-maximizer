@@ -22,7 +22,7 @@
                      '    height: auto !important;' +
                      '    display: block !important;' +
                      '}', sheet.cssRules.length);
-    sheet.insertRule('.status div {' +
+    sheet.insertRule('.scrollable div {' +
                      '    height: auto !important;' +
                      '}', sheet.cssRules.length);
     var maximize = doc => {
