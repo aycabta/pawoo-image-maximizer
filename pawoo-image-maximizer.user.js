@@ -25,6 +25,14 @@
     sheet.insertRule('.scrollable div {' +
                      '    height: auto !important;' +
                      '}', sheet.cssRules.length);
+    sheet.insertRule('.scrollable div[style^="box-sizing"] {' +
+                     '    width: 100% !important;' +
+                     '    left: auto !important;' +
+                     '    top: auto !important;' +
+                     '    right: auto !important;' +
+                     '    bottom: auto !important;' +
+                     '    margin-bottom: 3px !important;' +
+                     '}', sheet.cssRules.length);
     var maximize = doc => {
         var photos = doc.querySelectorAll('.media-item .u-photo');
         photos.forEach(photo => {
