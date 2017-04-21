@@ -10,7 +10,7 @@
 (function() {
     var sheet;
     var style = document.createElement('style');
-    style.setAttribute('id', 'great-css');
+    style.setAttribute('id', 'pawoo-image-maximizer-css');
     style.type = "text/css";
     var head = document.getElementsByTagName('head')[0];
     head.appendChild(style);
