@@ -28,11 +28,13 @@
     var maximize = doc => {
         var photos = doc.querySelectorAll('.media-item .u-photo');
         photos.forEach(photo => {
-            var url = photo.attributes['href'].value;
-            var img = document.createElement("img");
-            img.src = url;
-            img.style.width = '100%';
-            photo.appendChild(img);
+            if (photo.getElementsByTagName('img').length == 0) {
+                var url = photo.attributes['href'].value;
+                var img = document.createElement("img");
+                img.src = url;
+                img.style.width = '100%';
+                photo.appendChild(img);
+            }
         });
     };
     maximize(document);
