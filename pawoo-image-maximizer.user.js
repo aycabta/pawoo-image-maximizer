@@ -25,17 +25,16 @@
     sheet.insertRule('.status div {' +
                      '    height: auto !important;' +
                      '}', sheet.cssRules.length);
-    var maximize = function(doc) {
+    var maximize = doc => {
         var photos = doc.querySelectorAll('.media-item .u-photo');
-        for (var i = 0; i < photos.length; i++) {
-            var photo = photos[i];
+        photos.forEach(photo => {
             var url = photo.attributes['href'].value;
             var img = document.createElement("img");
             img.src = url;
             img.style.width = '100%';
             photo.appendChild(img);
-        }
-    }
+        });
+    };
     maximize(document);
     document.body.addEventListener(
         'AutoPagerize_DOMNodeInserted',
