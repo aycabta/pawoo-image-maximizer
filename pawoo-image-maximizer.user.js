@@ -15,9 +15,6 @@
     var head = document.getElementsByTagName('head')[0];
     head.appendChild(style);
     sheet = style.sheet;
-    sheet.insertRule('.media-spoiler {' +
-                     '    display: none !important;' +
-                     '}', sheet.cssRules.length);
     sheet.insertRule('.media-item .u-photo {' +
                      '    background-image: none !important;' +
                      '}', sheet.cssRules.length);
